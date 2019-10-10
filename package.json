@@ -1,0 +1,27 @@
+{
+  "name": "ti-arena",
+  "version": "1.0.0",
+  "description": "Multiplayer shooter",
+  "main": "public/main.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolasAllard/TI-Arena.git"
+  },
+  "author": "Nicolas Allard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicolasAllard/TI-Arena/issues"
+  },
+  "homepage": "https://github.com/NicolasAllard/TI-Arena#readme",
+  "dependencies": {
+    "electron": "^6.0.12",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}
