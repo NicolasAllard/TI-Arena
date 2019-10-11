@@ -1,10 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Mansalva&display=swap');
+
+body {
+    margin: 0;
+}
+
 .main-menu {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: -webkit-fill-available;
     background-color: #232931;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-menu h1 {
+    font-family: 'Mansalva', cursive;
+    color: white;
 }
 
 .join-wrapper {
     display: flex;
+    background-color: #393e46;
+    border-radius: 10px;
+    width: 70%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.join-button {
+    display: flex;
+    color: white;
+    background-color: #4ecca3;
+    width: 60%;
+    height: 50px;
+    border-radius: 10px;
+    font-family: 'Mansalva', cursive;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.join-button:hover {
+    background-color: #48b994;
+    cursor: pointer;
+}
+
+.join-button:active {
+    background-color: #3fa986;
 }
