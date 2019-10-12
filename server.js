@@ -21,16 +21,24 @@ app.get('/index.html', function (req, res) {
     res.sendFile(path.join(__dirname + "/index.html"));
 });
 
+
 //On user connection
 io.on('connection', function (socket) {
 
-    //If the user is new, 
+    //If the user is new,
     socket.on('new-user', function () {
-        users[socket.id] = socket.id;
+        if (users[socket.id] == undefined) {
+            users[socket.id] = socket.id;
+            console.log("Socket list:");
+            console.log(users);
+
+            io.emit('user-joined', socket.id);
+        }
     });
 
     socket.on('disconnect', function () {
-        //socket.broadcast.emit('user-disconnected', users[socket.id]);
+        socket.broadcast.emit('user-disconnected', socket.id);
         delete users[socket.id];
     });
+
 });

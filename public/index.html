@@ -12,11 +12,19 @@
     <div class="main-menu">
         <h1>TI-Arena</h1>
         <div id="join-wrapper" class="join-wrapper">
-            <div class="join-button">
+            <div class="join-button" id="btnJoin">
                 Join arena
             </div>
         </div>
     </div>
 </body>
+
+<script>
+    var btnJoin = document.getElementById("btnJoin");
+
+    btnJoin.addEventListener("click", function () {
+        socket.emit('new-user');
+    });
+</script>
 
 </html>
