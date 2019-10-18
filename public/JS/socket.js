@@ -7,3 +7,7 @@ socket.on('user-joined', function (id) {
 socket.on('user-disconnected', function (id) {
     console.log(id + 'has left the arena!');
 });
+
+socket.on('init-game', function(id) {
+    initGame();
+});

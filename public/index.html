@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="main-menu">
+    <div class="main-menu" id="main-menu">
         <h1>TI-Arena</h1>
         <div id="join-wrapper" class="join-wrapper">
             <div class="join-button" id="btnJoin">
@@ -17,8 +17,15 @@
             </div>
         </div>
     </div>
-</body>
 
+    <div class="game-menu hidden" id="game-menu">
+        <canvas id="game">
+
+        </canvas>
+    </div>
+
+</body>
+<script src="JS/game.js"></script>
 <script>
     var btnJoin = document.getElementById("btnJoin");
 

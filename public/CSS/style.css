@@ -50,3 +50,20 @@ body {
 .join-button:active {
     background-color: #3fa986;
 }
+
+.hidden {
+    display: none !important;
+}
+
+.game-menu {
+    width: 100%;
+    height: -webkit-fill-available;
+    display: flex;
+}
+
+#game {
+    width: 100%;
+    height: -webkit-fill-available;
+    display: flex;
+
+}

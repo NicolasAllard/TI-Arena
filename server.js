@@ -33,11 +33,13 @@ io.on('connection', function (socket) {
             console.log(users);
 
             io.emit('user-joined', socket.id);
+            socket.emit('init-game', socket.id);
         }
     });
 
     socket.on('disconnect', function () {
         socket.broadcast.emit('user-disconnected', socket.id);
+
         delete users[socket.id];
     });
 
