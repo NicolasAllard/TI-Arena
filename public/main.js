@@ -13,6 +13,9 @@ function createWindow() {
         width: 800,
         height: 600
     });
+
+    win.setResizable(false);
+
     win.loadURL(url.format({
         pathname: 'http://localhost:3000/'
     }));

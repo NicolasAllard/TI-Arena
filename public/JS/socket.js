@@ -8,6 +8,11 @@ socket.on('user-disconnected', function (id) {
     console.log(id + 'has left the arena!');
 });
 
-socket.on('init-game', function(id) {
-    initGame();
+socket.on('init-game', function (id) {
+    initGame(id);
+});
+
+socket.on('state', function (players) {
+    playerState(players);
+
 });
